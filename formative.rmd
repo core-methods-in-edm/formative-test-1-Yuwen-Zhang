@@ -1,12 +1,23 @@
+```{r}
 D1 <- read.csv ("~/Documents/RStudio/test 1/HMXPC13_DI_v2_5-14-14.csv", head = TRUE)
+```
 
+```{r}
 filter(D1, course_id == "HarvardX/CS50x/2012") %>% count() 
+```
 
+```{r}
 filter(D1, start_time_DI == "2012-10-15") %>% count()
+```
 
+```{r}
 D <- filter(D1, final_cc_cname_DI == "Australia")
 D2 <- select(D,userid_DI, start_time_DI)
+```
 
+```{r}
 start_time <- select(D1, userid_DI, start_time_DI) 
 date <- distinct(D1, start_time_DI)
 spread(date, usesrid_Di)
+```
+
